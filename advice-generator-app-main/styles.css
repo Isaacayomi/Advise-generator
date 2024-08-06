@@ -1,0 +1,91 @@
+:root {
+  --cyan: hsl(193, 38%, 86%);
+  --green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: var(--dark-blue);
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  padding-inline: 0.9rem;
+}
+
+main {
+  background-color: var(--dark-grayish-blue);
+  max-width: 425px;
+  width: 100%;
+  margin-inline: auto;
+  border-radius: 1rem;
+  position: relative;
+}
+
+p,
+h1 {
+  max-width: 425px;
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+  padding-inline: 0.8rem;
+}
+
+.advice__heading h1 {
+  font-size: 0.7rem;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  color: var(--green);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.quote {
+  font-size: 28px;
+  color: var(--cyan);
+  padding-bottom: 2rem;
+}
+
+.pattern__divider {
+  max-width: 330px;
+  margin-inline: auto;
+  padding-bottom: 4rem;
+}
+
+.pattern__divider img {
+  display: block;
+  width: 100%;
+}
+
+.dice__icon {
+  max-width: 10px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.dice {
+  display: block;
+  width: 18%;
+  background-color: var(--green);
+  padding: 0.65rem;
+  border-radius: 40%;
+  position: absolute;
+  top: 90%;
+  bottom: 0;
+  left: 42%;
+}
+
+.dice:hover {
+  cursor: pointer;
+}
+
+

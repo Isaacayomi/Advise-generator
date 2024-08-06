@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -13,12 +12,38 @@
     />
 
     <title>Advice generator app</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+    
   </head>
   <body>
-    Advice #<!-- Advice ID goes here -->
+    <main>
+      <div class="advice__heading">
+        <h1>ADVICE #<span class="advice__no">117</span></h1>
+      </div>
+      <div class="advice__text">
+        <p class="quote">
+          "It is easy to sit up and take notice, what's difficult is getting up
+          and taking action."
+        </p>
+      </div>
+      <div class="pattern__divider">
+        <img
+          src="./images/pattern-divider-mobile.svg"
+          alt="pattern-divider"
+          class="divider"
+        />
+      </div>
 
-    "<!-- Advice text goes here -->"
+      <div class="dice__icon">
+        <img src="./images/icon-dice.svg" alt="dice-icon" class="dice" />
+      </div>
+    </main>
 
     <script src="script.js"></script>
   </body>
