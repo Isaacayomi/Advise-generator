@@ -10,17 +10,24 @@ const renderQuotes = function (data) {
   quote.textContent = data.slip.advice;
 };
 
-const getQuote = function () {
-  const request = fetch("https://api.adviceslip.com/advice")
-    .then((response) => {
-      console.log(response);
-      return response.json();
-    })
-    .then((data) => {
-      console.log(data);
-      renderQuotes(data);
-      //   return data;
-    });
+const getQuote = async function () {
+  const res = await fetch(`https://api.adviceslip.com/advice`);
+  const datas = await res.json();
+  console.log(datas);
+  renderQuotes(datas);
 };
+
+// const getQuote = function () {
+//   const request = fetch("https://api.adviceslip.com/advice")
+//     .then((response) => {
+//       console.log(response);
+//       return response.json();
+//     })
+//     .then((data) => {
+//       console.log(data);
+//       renderQuotes(data);
+//       //   return data;
+//     });
+// };
 
 diceIcon.addEventListener("click", getQuote);
