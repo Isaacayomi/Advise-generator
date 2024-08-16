@@ -10,6 +10,7 @@ const renderQuotes = function (data) {
   quote.textContent = data.slip.advice;
 };
 
+// Using the Async....Await method
 const getQuote = async function () {
   const res = await fetch(`https://api.adviceslip.com/advice`);
   const datas = await res.json();
@@ -17,6 +18,7 @@ const getQuote = async function () {
   renderQuotes(datas);
 };
 
+// Using the Fetch.....Then method
 // const getQuote = function () {
 //   const request = fetch("https://api.adviceslip.com/advice")
 //     .then((response) => {
