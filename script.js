@@ -12,10 +12,16 @@ const renderQuotes = function (data) {
 
 // Using the Async....Await method
 const getQuote = async function () {
-  const res = await fetch(`https://api.adviceslip.com/advice`);
-  const datas = await res.json();
-  console.log(datas);
-  renderQuotes(datas);
+  try {
+    const res = await fetch(`https://api.adviceslip.com/advice`);
+    // Catch error after the fetch. Note: this custom error only shows if the server fails or returns an error respons
+    if (!res.ok) throw new Error(`Something went wrong`);
+    const datas = await res.json();
+    console.log(datas);
+    renderQuotes(datas);
+  } catch (err) {
+    alert(err.message);
+  }
 };
 
 // Using the Fetch.....Then method
