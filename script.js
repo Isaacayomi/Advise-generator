@@ -22,14 +22,19 @@ const getQuote = async function () {
 // const getQuote = function () {
 //   const request = fetch("https://api.adviceslip.com/advice")
 //     .then((response) => {
-//       console.log(response);
+//       if (!response.ok)
+//         throw new Error(`Cannot Get Quotes (${response.status})`);
+//       // console.log(response);
 //       return response.json();
 //     })
 //     .then((data) => {
 //       console.log(data);
 //       renderQuotes(data);
 //       //   return data;
-//     });
+//     })
+//     .catch((err) =>
+//       alert(`Get a stable connection (${err.message})`)
+//     );
 // };
 
 diceIcon.addEventListener("click", getQuote);
